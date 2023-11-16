@@ -6,9 +6,20 @@ defmodule Academy do
   end
 
   def details do
-    {name, age} = IO.gets("What is your name and age?")
+    # Capture user input for name and age
+    uname = IO.gets("What is your name? ") |> String.trim
+    uage = IO.gets("What is your age? ") |> String.trim |> String.to_integer
 
-    "#{name}, you are #{age} years old."
+    # Create a map with name and age values
+    person_details = %{name: uname, age: uage}
+
+    # Process the captured data
+    "#{person_details.name}, you are #{person_details.age} years old."
+  end
+
+
+  def warnme do
+    IO.warn("You are warned!")
   end
 
   def sum(x,y) do
