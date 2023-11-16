@@ -5,6 +5,12 @@ defmodule Academy do
     "Hello #{name}."
   end
 
+  def details do
+    {name, age} = IO.gets("What is your name and age?")
+
+    "#{name}, you are #{age} years old."
+  end
+
   def sum(x,y) do
     x + y
   end
